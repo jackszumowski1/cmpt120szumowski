@@ -6,6 +6,6 @@
 
 def main():
     print("Hello, instructor!")
-
+    print("Good Bye!")
     
 main()
