@@ -7,15 +7,15 @@ def main():
     print("We are going to calculate a fibonacci sequence to the n'th number")
     n = eval(input("What number would you like n to be: "))
         
-    prior = 0
+    prior = 1
     former = 1
 
-    if(n == 0):
+    if(n < 3):
         print("Your number is 1")
 
     else:
     
-        for i in range(n):
+        for i in range(n-2):
     
             myNum = prior + former
             prior = former
