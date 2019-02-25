@@ -17,16 +17,13 @@ def main():
     sign = 1
 
     #only 4 the first time
-    piGuess = 4
+    piGuess = 0
     
 
     for i in range(n):
 
             
         piece1 = piGuess
-
-        #recuring
-        denom = denom + 2
         
         piece2 = numer / denom
 
@@ -35,16 +32,19 @@ def main():
    
         #if its even subtract
         if(sign == 1):
-            piGuess = piece1 - piece2
+            piGuess = piece1 + piece2
 
         #if its odd add
         if(sign == -1):
-            piGuess = piece1 + piece2 
+            piGuess = piece1 - piece2 
 
         
 
         #flip + to -
         sign = sign * -1
+
+        #recuring
+        denom = denom + 2
 
         
         
