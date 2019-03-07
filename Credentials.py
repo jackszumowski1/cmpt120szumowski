@@ -46,7 +46,7 @@ def checkPass():
     if(passLen >= 8):
         goodEnough = True
         
-    else:
+    else: # This should be a while loop and the validation goes in a separate function
         goodEnough = False
     
         while goodEnough == False:
