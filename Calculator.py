@@ -11,9 +11,6 @@ def main():
     EQ = listEQ()
 
     math(EQ)
-#    print("The answer is",ans)
-
-    
     
     """calcWin = GraphWin("Calculator", 340, 300)
     calcWin.setBackground("white")
@@ -62,10 +59,8 @@ def main():
 def listEQ():
 
     eq = input("What is your equation:")
-    eq = eq.replace(' ','')
-    eq = list(eq)
     
-    return eq
+    return eq.split()
 
 
 def math(yourEQ):
@@ -78,9 +73,9 @@ def math(yourEQ):
         
         #multipy
         if yourEQ[i] == '*':
-            print("MADE IT")
-            p1 = int(yourEQ[i-1])
-            p2 = int(yourEQ[i+1])
+            print(yourEQ)
+            p1 = float(yourEQ[i-1])
+            p2 = float(yourEQ[i+1])
 
             #pass in p1 and p2 to multiply them
             mAns = mult(p1,p2)
@@ -93,12 +88,12 @@ def math(yourEQ):
             #asign new number into the place of old numbers
             yourEQ.insert(i-1,mAns)
             i = 0
-            print(yourEQ)
+            #print(yourEQ)
             
         #Divide
         if yourEQ[i] == '/':
-            p1 = int(yourEQ[i-1])
-            p2 = int(yourEQ[i+1])
+            p1 = float(yourEQ[i-1])
+            p2 = float(yourEQ[i+1])
             dAns = div(p1,p2)
 
             #remove the numbers used
@@ -116,7 +111,7 @@ def math(yourEQ):
             i = 0
         i +=1
         
-    print(yourEQ)           
+    #print(yourEQ)           
 
     #now lets add and subtract
 
@@ -124,8 +119,8 @@ def math(yourEQ):
         
         #add
         if yourEQ[i] == "+":
-            p1 = int(yourEQ[i-1])
-            p2 = int(yourEQ[i+1])
+            p1 = float(yourEQ[i-1])
+            p2 = float(yourEQ[i+1])
             aAns = add(p1,p2)
             #remove the numbers used
             del yourEQ[i-1]
@@ -139,8 +134,8 @@ def math(yourEQ):
             
         #subtract
         if yourEQ[i] == "-":
-            p1 = int(yourEQ[i-1])
-            p2 = int(yourEQ[i+1])
+            p1 = float(yourEQ[i-1])
+            p2 = float(yourEQ[i+1])
             sAns = sub(p1,p2)
             #remove the numbers used
             
@@ -153,8 +148,8 @@ def math(yourEQ):
             i = 0
 
         i += 1
-        
-    print(yourEQ)
+    ans = yourEQ[0]
+    print("The answer is", ans)
 
 
 def add(a,b):
