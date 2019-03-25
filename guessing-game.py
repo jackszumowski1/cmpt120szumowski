@@ -19,20 +19,28 @@ def main():
 
         #convert guess to lowercase
         guess = guess.lower()
-
+        
         
         #check if they still want to play
-        if guess == "quit":
+        q = hasQ(guess)        
+
+        if q == False:
             print("HAHA I have defeated you")
             gotIt = False
 
-        else:   
+        
+        else:
+            
             #check if it matches
             good = nameCheck(guess, name)
 
             if good == True:
                 print("CONGRATS you got it right")
+                like(name)
+                
                 gotIt = False
+        
+                
 
             else:
                 print("Good try but no")
@@ -48,6 +56,29 @@ def nameCheck(guess, answer):
     else:
         return False
 
+
+def like(name):
+
+    print("Do you like", name + "s ")
+    like = input("y/n: ")
+
+    if like == 'y':
+        print("Awesome me too")
+                    
+    else:
+        print("Well I guess not everyone likes them")
+
+        
+def hasQ(guess):
+    has = guess[0]
+    
+    if has == "q":
+            return False
+        
+    else:
+        return True
+
+    
 main()
 
 
