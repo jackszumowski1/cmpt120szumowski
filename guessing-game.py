@@ -9,6 +9,7 @@ def main():
     name = "cat"
 
     print("Let's see if you can guess the animal I am thinking of")
+    print("To give up type quit")
 
     gotIt = True
     
@@ -16,15 +17,26 @@ def main():
 
         guess = input("What is your guess: ")
 
-        good = nameCheck(guess, name)
+        #convert guess to lowercase
+        guess = guess.lower()
 
-        if good == True:
-            print("CONGRATS you got it right")
+        
+        #check if they still want to play
+        if guess == "quit":
+            print("HAHA I have defeated you")
             gotIt = False
 
-        else:
-            print("Good try but no")
-            gotIt = True
+        else:   
+            #check if it matches
+            good = nameCheck(guess, name)
+
+            if good == True:
+                print("CONGRATS you got it right")
+                gotIt = False
+
+            else:
+                print("Good try but no")
+                gotIt = True
 
 
     
