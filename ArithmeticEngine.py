@@ -14,10 +14,8 @@ def showOutro():
     
 
 def doLoop():
-
-    a = True
     
-    while a == True:
+    while True:
         
         cmd = input("What computation do you want to perform: ")
         cmd = cmd.lower()
@@ -26,35 +24,37 @@ def doLoop():
             cmd = input("Sorry but " + cmd + " is not valid. Please re-enter a valid command: ")
             cmd = cmd.lower()
         
-        
         if cmd == "add":
             add1 = int(input("Enter the first number: "))
             add2 = int(input("Enter the second number: "))
             result = add1 + add2
-            a = False
             
         elif cmd == "sub":
             sub1 = int(input("Enter the first number: "))
             sub2 = int(input("Enter the second number: "))
             result = sub1 - sub2
-            a = False
             
         elif cmd == "mult":
             mult1 = int(input("Enter the first number: "))
             mult2 = int(input("Enter the second number: "))
             result = mult1 * mult2
-            a = False
             
         elif cmd == "div":
             div1 = int(input("Enter the first number: "))
             div2 = int(input("Enter the second number: "))
+            
+            try:frac = div1 / div2 # will crash if division by zero
+            except ZeroDivisionError:
+                print("Unable to divide by zero!")
+                continue
+            
             result = div1 / div2
-            a = False
             
         elif cmd == "quit":
             break
+            
         
-    print("The result is " + str(result) + ".\n")
+        print("The result is " + str(result) + ".\n")
 
 def main():
     showIntro()
