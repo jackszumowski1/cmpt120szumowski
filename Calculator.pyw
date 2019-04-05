@@ -1,9 +1,9 @@
-# DrawCalc.py
+# Calculator.pyw
 # Draw Calculator window
 # Author: Jack Szumowski
 
 from Graphics import *
-from Calculator import *
+from CalculatorFunctions import *
 
 def drawCalc():
 
