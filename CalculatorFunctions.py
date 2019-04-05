@@ -1,4 +1,4 @@
-#Calculator.py
+#CalculatorFunctions.py
 #Description: Write an on screen calculater that can do the 4 basic arithmetic functions
 #Author: Jack Szumowski
 """
