@@ -45,8 +45,9 @@ def doLoop():
             div1 = int(input("Enter the first number: "))
             div2 = int(input("Enter the second number: "))
             
-            try:frac = a / b # will crash if division by zero
-            except ZeroDivisionError:
+            try:
+                frac = a / b # will crash if division by zero
+            except:
                 print("Unable to divide by zero!")
                 continue
             
