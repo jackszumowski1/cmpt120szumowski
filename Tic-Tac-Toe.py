@@ -58,14 +58,17 @@ def hasBlanks(board):
     # for each square in the row...
     # check whether the square is blank
     # if so, return True
-    
-    if 0 in board or " " in board:
+
+    # JA: this does not work because board has lists, not numbers
+    for row in board:
+        if 0 in row:
+#    if 0 in board or " " in board:
         
-        return True
+            return True
     
 
-    else:
-        return False # if no square is blank
+#    else:
+    return False # if no square is blank
     
 
 
@@ -86,6 +89,8 @@ def main():
         markBoard(board,row,col,player)
         # switch player for next turn
         player = player % 2 + 1
+    # JA: You have to print the board again
+    printBoard(board)
         
 
 main()
