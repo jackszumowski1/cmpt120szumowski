@@ -39,8 +39,9 @@ def main():
 
         if vals[0] == "quit":
             
-            breakprodId = int(vals[0])
-            count = int(vals[1])
+            break
+         prodId = int(vals[0])
+         count = int(vals[1])
             
             if productQuantities[prodId] >= count:
                 
