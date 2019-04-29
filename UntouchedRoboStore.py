@@ -2,8 +2,6 @@
 # Author: Jack Szumowski
 # Description: make an interactive store with a few items
 # Date: 04/29/19
-
-
 productNames = [ "Ultrasonic range finder",
                  "Servo motor",
                  "Servo controller",
@@ -26,8 +24,6 @@ def printStock():
             
             print(str(i)+")",productNames[i], "$", productPrices[i])
             print()
-
-            
 def main():
     
     cash = float(input("How much money do you have? $"))
@@ -55,8 +51,6 @@ def main():
                     
                 else:
                     print("Sorry, you cannot afford that product.")
-
             else:
                 print("Sorry, we are sold out of", productNames[prodId])
-
 main()
