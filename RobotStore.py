@@ -29,7 +29,6 @@ def printStock():
             print(str(i)+")",productNames[i], "$", productPrices[i])
             print()
 
-            
 def main():
     
     cash = float(input("How much money do you have? $"))
